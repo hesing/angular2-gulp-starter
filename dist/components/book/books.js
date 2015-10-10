@@ -10,23 +10,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
-var books_1 = require('components/book/books');
-var Root = (function () {
-    function Root() {
-        this.title = 'Hello PPAAA';
+var compose_1 = require('components/compose/compose');
+var Book = (function () {
+    function Book() {
+        this.bookTitle = 'All Books';
+        this.details = [
+            { title: '1st Book', msg: 'Lorem ipsum dolor sit amet.' },
+            { title: '2nd Book', msg: 'Lorem ipsum dolor sit amet.' },
+            { title: '3rd Book', msg: 'Lorem ipsum dolor sit amet.' },
+            { title: '4th Book', msg: 'Lorem ipsum dolor sit amet.' },
+            { title: '5th Book', msg: 'Lorem ipsum dolor sit amet.' }
+        ];
+        this.grade = 1;
     }
-    Root = __decorate([
+    Book = __decorate([
         angular2_1.Component({
-            selector: 'app'
+            selector: 'books'
         }),
         angular2_1.View({
-            templateUrl: './components/root/root.html',
-            directives: [books_1.Book]
+            templateUrl: './components/book/books.html',
+            directives: [angular2_1.NgFor, compose_1.Compose]
         }), 
         __metadata('design:paramtypes', [])
-    ], Root);
-    return Root;
+    ], Book);
+    return Book;
 })();
-exports.Root = Root;
+exports.Book = Book;
 
-//# sourceMappingURL=root.js.map
+//# sourceMappingURL=books.js.map

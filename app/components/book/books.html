@@ -1,0 +1,20 @@
+<div>
+    <h1>{{ bookTitle }}</h1>
+    <content select="[body]"></content>
+
+    <ul class="list-group">
+        <li class="list-group-item" *ng-for="#item of details; #i = index">
+            <span class="badge">{{i}}</span> {{item.title}} - {{ item.msg }}
+        </li>
+    </ul>
+
+    <div class="page-header">
+    	<h1>Show/Hide Demo <small>Set grade `0` to make below paragraph visible</small></h1>
+    	<p [hidden]=grade>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus cupiditate perspiciatis, autem, possimus fuga amet sapiente maxime consectetur dolore impedit qui, animi dignissimos assumenda id temporibus voluptates alias cumque totam?</p>
+    </div>
+    <div class="page-header">
+    	<h1>Compose Module</h1>
+    	<compose></compose>
+    </div>
+
+</div>

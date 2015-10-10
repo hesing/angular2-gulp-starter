@@ -10,23 +10,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
-var books_1 = require('components/book/books');
-var Root = (function () {
-    function Root() {
-        this.title = 'Hello PPAAA';
+var Compose = (function () {
+    function Compose() {
+        this.title = 'I am composing';
     }
-    Root = __decorate([
+    Compose = __decorate([
         angular2_1.Component({
-            selector: 'app'
+            selector: 'compose'
         }),
         angular2_1.View({
-            templateUrl: './components/root/root.html',
-            directives: [books_1.Book]
+            templateUrl: 'components/compose/compose.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], Root);
-    return Root;
+    ], Compose);
+    return Compose;
 })();
-exports.Root = Root;
+exports.Compose = Compose;
 
-//# sourceMappingURL=root.js.map
+//# sourceMappingURL=compose.js.map
