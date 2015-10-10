@@ -16,6 +16,11 @@ gulp.task('ts-lint', function() {
 		}))
 })
 
+gulp.task('copy-html', function(){
+	return gulp.src(config.root+"/**/*.html")
+				.pipe(gulp.dest(config.tsOutputPath));
+});
+
 gulp.task('compile-ts', function() {
 	var sourceTsFiles = [
 		config.allTs,
@@ -32,7 +37,7 @@ gulp.task('compile-ts', function() {
 		.pipe(gulp.dest(config.tsOutputPath));
 });
 
-gulp.task('serve', ['ts-lint', 'compile-ts'], function() {
+gulp.task('serve', ['ts-lint', 'compile-ts', 'copy-html'], function() {
 	
 	gulp.watch([config.allTs], ['ts-lint', 'compile-ts']);
 	
@@ -45,13 +50,13 @@ gulp.task('serve', ['ts-lint', 'compile-ts'], function() {
     notify: true,
     reloadDelay: 0,
     server: {
-      baseDir: './dist',
+      baseDir: ['./dist', './app'],
       middleware: superstatic({ debug: false})
     }
 	});
 
 	console.log("browse http://localhost:3000");
-	
+	gulp.watch("**/*.html", ["copy-html"]).on("change", browserSync.reload);
 });
 
 gulp.task('default', ['serve']);
