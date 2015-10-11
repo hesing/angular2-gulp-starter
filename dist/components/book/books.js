@@ -11,29 +11,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var angular2_1 = require('angular2/angular2');
 var compose_1 = require('components/compose/compose');
+var BookService_1 = require('components/book/BookService');
+var FriendsService = (function () {
+    function FriendsService() {
+        this.names = ["Alice", "Aarav", "Martín", "Shannon", "Ariana", "Kai"];
+    }
+    return FriendsService;
+})();
 var Book = (function () {
-    function Book() {
+    function Book(bookService) {
         this.bookTitle = 'All Books';
-        this.details = [
-            { title: '1st Book', msg: 'Lorem ipsum dolor sit amet.' },
-            { title: '2nd Book', msg: 'Lorem ipsum dolor sit amet.' },
-            { title: '3rd Book', msg: 'Lorem ipsum dolor sit amet.' },
-            { title: '4th Book', msg: 'Lorem ipsum dolor sit amet.' },
-            { title: '5th Book', msg: 'Lorem ipsum dolor sit amet.' }
-        ];
+        this.details = bookService.details;
         this.grade = 1;
     }
     Book = __decorate([
         angular2_1.Component({
-            selector: 'books'
+            selector: 'books',
+            bindings: [BookService_1.BookService]
         }),
         angular2_1.View({
             templateUrl: './components/book/books.html',
             directives: [angular2_1.NgFor, compose_1.Compose]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [(typeof (_a = typeof BookService_1.BookService !== 'undefined' && BookService_1.BookService) === 'function' && _a) || Object])
     ], Book);
     return Book;
+    var _a;
 })();
 exports.Book = Book;
 
