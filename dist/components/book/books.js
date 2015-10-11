@@ -14,7 +14,7 @@ var compose_1 = require('components/compose/compose');
 var BookService_1 = require('components/book/BookService');
 var FriendsService = (function () {
     function FriendsService() {
-        this.names = ["Alice", "Aarav", "Martín", "Shannon", "Ariana", "Kai"];
+        this.names = ['Alice', 'Aarav', 'Martín', 'Shannon', 'Ariana', 'Kai'];
     }
     return FriendsService;
 })();

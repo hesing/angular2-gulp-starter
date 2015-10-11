@@ -1,4 +1,6 @@
 import {Component, View} from 'angular2/angular2';
+// import {Parent} from 'angular2/annotations';
+// import {BookService} from 'components/book/BookService';
 
 @Component({
 	selector: 'compose'
@@ -16,8 +18,9 @@ export class Compose {
 		this.title = 'I am composing';
 	}
 
-	addSubtitle(elm){
+	addSubtitle(elm) {
 		this.subtitle = elm.value;
+		//BookService.addTitle({ title: this.subtitle });
 	}
 
 	doneTyping($event) {

@@ -11,6 +11,11 @@ export class BookService {
 		];
 	}
 
+	// addTitle(obj){
+	// 	this.details.push(obj);
+	// 	console.log(obj);
+	// }
+
 	// getAllBooks(){
 	// 	return this.details;
 	// }

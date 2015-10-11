@@ -6,7 +6,7 @@ import {BookService} from 'components/book/BookService';
 class FriendsService {
 	names: Array<string>;
 	constructor() {
-        this.names = ["Alice", "Aarav", "Martín", "Shannon", "Ariana", "Kai"];
+        this.names = ['Alice', 'Aarav', 'Martín', 'Shannon', 'Ariana', 'Kai'];
 	}
 }
 
@@ -31,4 +31,8 @@ export class Book {
 		this.details = bookService.details;
 		this.grade = 1;
 	}
+
+	// addTitle(obj){
+	// 	BookService.addTitle(obj);
+	// }
 }
