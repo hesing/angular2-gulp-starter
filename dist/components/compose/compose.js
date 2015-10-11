@@ -14,6 +14,15 @@ var Compose = (function () {
     function Compose() {
         this.title = 'I am composing';
     }
+    Compose.prototype.addSubtitle = function (elm) {
+        this.subtitle = elm.value;
+    };
+    Compose.prototype.doneTyping = function ($event) {
+        if ($event.which === 13) {
+            this.subtitle = $event.target.value;
+            $event.target.value = null;
+        }
+    };
     Compose = __decorate([
         angular2_1.Component({
             selector: 'compose'
