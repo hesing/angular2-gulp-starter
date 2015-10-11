@@ -10,28 +10,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
-var compose_1 = require('components/compose/compose');
-var BookService_1 = require('components/book/BookService');
-var Book = (function () {
-    function Book(bookService) {
-        this.bookTitle = 'All Books';
-        this.details = bookService.details;
-        this.grade = 1;
+var MyForm = (function () {
+    function MyForm() {
     }
-    Book = __decorate([
+    MyForm.prototype.onSubmit = function (value) {
+        console.log('you submitted value: ', value);
+    };
+    MyForm = __decorate([
         angular2_1.Component({
-            selector: 'books',
-            bindings: [BookService_1.BookService]
+            selector: 'myform'
         }),
         angular2_1.View({
-            templateUrl: './components/book/books.html',
-            directives: [angular2_1.NgFor, compose_1.Compose]
+            templateUrl: './components/form/form.html',
+            directives: [angular2_1.FORM_DIRECTIVES]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof BookService_1.BookService !== 'undefined' && BookService_1.BookService) === 'function' && _a) || Object])
-    ], Book);
-    return Book;
-    var _a;
+        __metadata('design:paramtypes', [])
+    ], MyForm);
+    return MyForm;
 })();
-exports.Book = Book;
+exports.MyForm = MyForm;
 
-//# sourceMappingURL=books.js.map
+//# sourceMappingURL=form.js.map

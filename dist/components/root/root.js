@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var angular2_1 = require('angular2/angular2');
 var books_1 = require('components/book/books');
+var form_1 = require('components/form/form');
 var Root = (function () {
     function Root() {
         this.title = 'Hello PPAAA';
@@ -21,7 +22,7 @@ var Root = (function () {
         }),
         angular2_1.View({
             templateUrl: './components/root/root.html',
-            directives: [books_1.Book]
+            directives: [books_1.Book, form_1.MyForm]
         }), 
         __metadata('design:paramtypes', [])
     ], Root);

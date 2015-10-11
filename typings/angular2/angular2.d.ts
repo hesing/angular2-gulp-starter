@@ -5920,9 +5920,3 @@ declare module ng {
 declare module "angular2/angular2" {
   export = ng;
 }
-
-// declare module "angular2/annotations" {
-//   function Parent(): (target: any) => any;
-//   function Ancestor(): (target: any) => any;
-// }
-

@@ -10,28 +10,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
-var compose_1 = require('components/compose/compose');
-var BookService_1 = require('components/book/BookService');
-var Book = (function () {
-    function Book(bookService) {
-        this.bookTitle = 'All Books';
-        this.details = bookService.details;
-        this.grade = 1;
+var About = (function () {
+    function About() {
     }
-    Book = __decorate([
+    About = __decorate([
         angular2_1.Component({
-            selector: 'books',
-            bindings: [BookService_1.BookService]
+            selector: 'about'
         }),
         angular2_1.View({
-            templateUrl: './components/book/books.html',
-            directives: [angular2_1.NgFor, compose_1.Compose]
+            templateUrl: './components/about/about.html'
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof BookService_1.BookService !== 'undefined' && BookService_1.BookService) === 'function' && _a) || Object])
-    ], Book);
-    return Book;
-    var _a;
+        __metadata('design:paramtypes', [])
+    ], About);
+    return About;
 })();
-exports.Book = Book;
+exports.About = About;
 
-//# sourceMappingURL=books.js.map
+//# sourceMappingURL=about.js.map
